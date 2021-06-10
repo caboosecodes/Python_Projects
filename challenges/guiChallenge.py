@@ -23,7 +23,7 @@ class ParentWindow(Frame):
         self.btnClose = Button(self.master, text = "Close Program", width = 12, height = 2)
 
         # instantiate Entry() from tkinter
-        self.txt = getPath()
+        self.txt = Entry(self.master, text = "", width = 53)
         self.txt2 = Entry(self.master, text = "", width = 53)
         
 
