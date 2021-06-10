@@ -7,7 +7,7 @@ f.write(" \
     <html>\
         <body>\
             <h1>\
-        Stay tuned for our amazing summer sale!\
+        Stay tuned for our Amazing summer sale!\
             </h1>\
         </body>\
     </html>\
