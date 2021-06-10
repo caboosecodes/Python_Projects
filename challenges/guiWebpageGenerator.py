@@ -34,16 +34,7 @@ class Parentwindow(Frame):
         # places Button() widget in window
         self.btnCan.grid(row=2, column=1, padx=(0, 15), pady=(5,0), sticky=E)
         
-        # insert() inserts text at an index, in this case 1.0, in the Text() field
-        self.codeText.insert("1.0", "\
-            <html>\
-                <body>\
-                    <h1>\
-                Please place your text here\
-                    </h1>\
-                </body>\
-            </html>\
-            ")
+        
     # function to generate webpage
     def generateWebpage(self):
         # .get() retrives the content of Text() widget
@@ -52,13 +43,15 @@ class Parentwindow(Frame):
         # creates main.html or writes over it if it exists
         f = open("main.html", "w") 
         # writes in the document
-        # writes the content from the Text() widget
-        f.write(textEntry)
-        """ At first I tried just having the Text() widget just be
-            text that would go in the HTML body and have the actual
-            HTML "code" be in f.write() and then use {}.format(textEntry)
-            to just insert the text from Text() widget into HTML 
-            but I couldn't figure it out"""
+        f.write("\
+                <html>\
+                    <body>\
+                        <h1>\
+                    {}\
+                        </h1>\
+                    </body>\
+                </html>\
+                ".format(textEntry))
         f.close()
         
         # opens main.html in a new tab in your web browser
