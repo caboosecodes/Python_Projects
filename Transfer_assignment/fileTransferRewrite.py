@@ -28,6 +28,3 @@ for file in fileNames:
     if modifyTime > (datetime.now() + timedelta(days=-1)):
         shutil.copy(abPath, destination)
 
-    
-    """if datetime.fromtimestamp(file) > (datetime.now() + timedelta(days=-1)):
-        shutil.copyfiles(source, destination)"""

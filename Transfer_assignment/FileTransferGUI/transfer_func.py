@@ -23,8 +23,10 @@ def getDestination(self):
     self.txt_destination.insert("1.0", destinationPath)
 
 def copy(self):
-    source = self.txt_source.get("1.0", "end")
-    destination = self.txt_destination.get("1.0", "end")
+    x = self.txt_source.get("1.0", "end")
+    source = x.replace("/", "\\")
+    y = self.txt_destination.get("1.0", "end")
+    destination = y.replace("/", "\\")
     fileNames = os.listdir(source)
 
     for file in fileNames:
