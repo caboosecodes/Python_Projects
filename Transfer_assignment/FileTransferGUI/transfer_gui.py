@@ -33,12 +33,12 @@ def load_gui(self):
     self.btn_copy.grid(row = 4, column = 1, padx=(0,0), pady=(0,0))
 
     # ***text***
-    # Text() is tkinter class for a text field
-    # class self.txt_source is the name for the Text() instantiation
+    # Entry() is tkinter class for a entry field
+    # class self.txt_source is the name for the Entry() instantiation
     # grid() places it in the window
-    self.txt_source = tk.Text(self.master, height = 1, font=("Arial", 12))
+    self.txt_source = tk.Entry(self.master, width= 25, font=("Arial", 12))
     self.txt_source.grid(row = 1, column = 1, padx = (0,0), pady = (0,0))
-    self.txt_destination = tk.Text(self.master, height = 1, font=("Arial", 12))
+    self.txt_destination = tk.Entry(self.master, width= 25, font=("Arial", 12))
     self.txt_destination.grid(row = 3, column = 1, padx = (0,0), pady = (0,0))
 
 
