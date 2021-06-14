@@ -14,19 +14,17 @@ def getSource(self):
     # sourcePath stores the string
     sourcePath = filedialog.askdirectory(initialdir="C:/", title="Select a folder")
     # insert it into text widget
-    self.txt_source.insert("1.0", sourcePath)
+    self.txt_source.insert(0, sourcePath)
 
 def getDestination(self):
     # destinationPath stores the string
     destinationPath = filedialog.askdirectory(initialdir="C:/", title="Select a destination folder")
     # insert it into the text widget
-    self.txt_destination.insert("1.0", destinationPath)
+    self.txt_destination.insert(0, destinationPath)
 
 def copy(self):
-    x = self.txt_source.get("1.0", "end")
-    source = x.replace("/", "\\")
-    y = self.txt_destination.get("1.0", "end")
-    destination = y.replace("/", "\\")
+    source = self.txt_source.get()
+    destination = self.txt_destination.get()
     fileNames = os.listdir(source)
 
     for file in fileNames:
