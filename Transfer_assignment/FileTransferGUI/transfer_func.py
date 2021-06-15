@@ -10,13 +10,19 @@ import transfer_main
 import transfer_gui
 
 def getSource(self):
+    # deletes any text that may be in the Entry widget
+    self.txt_source.delete(0,"end")
     # filedialog.askdirectory() opens a window allowing you to select directory
     # sourcePath stores the string
     sourcePath = filedialog.askdirectory(initialdir="C:/", title="Select a folder")
     # insert it into text widget
     self.txt_source.insert(0, sourcePath)
+    
+    
 
 def getDestination(self):
+    # deletes any text that may be in the Entry widget
+    self.txt_destination.delete(0,"end")
     # destinationPath stores the string
     destinationPath = filedialog.askdirectory(initialdir="C:/", title="Select a destination folder")
     # insert it into the text widget
