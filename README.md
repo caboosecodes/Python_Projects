@@ -13,4 +13,4 @@ The phonebook projects lets users save a contact's name, phone number, and email
 Provides the user to with a simple graphical user interface (GUI) to select a directory (folder) and a destination directory and transfers the files over if the files were created within the last 24 hours.
 
 # Miscellaneous files
-Various files that I have saved as I have made my way through The Tech Academy's Python Course.
+This repository also holds various files that I have saved as I have made my way through The Tech Academy's Python Course.
